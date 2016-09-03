@@ -9,13 +9,12 @@ game = {
 	guessesRemaining : 10, //per word
 	currentWrd : null, //object for word
 	//start game needs to take word param
-	startGame : function (wrd){
+	startGame : function (){
 		//guesses
 		this.resetGuessesRemaining ();
 
 		//random word from array
 		this.currentWrd = new Word(this.wordBank[math.floor(math.random()*this.wordBank.length)]);
-
 		this.currentWrd.getLets();
 
 		this.keepPromptingUser();
@@ -27,9 +26,9 @@ game = {
 	keepPromptingUser : function(){
 		var self = this;
 		prompt.get(['guessLetter'], function(err,result){
-
+		console.log (' You guessed: ' + result.guessLetter)
 		});
 	}
 }
 
-startGame()
+// startGame()
