@@ -1,0 +1,3 @@
+exports.game = {
+	wordBank : ['test']
+}
